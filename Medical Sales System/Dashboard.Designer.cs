@@ -94,7 +94,7 @@
             this.mtClients.ActiveControl = null;
             this.mtClients.Location = new System.Drawing.Point(-4, 200);
             this.mtClients.Name = "mtClients";
-            this.mtClients.Size = new System.Drawing.Size(198, 75);
+            this.mtClients.Size = new System.Drawing.Size(198, 84);
             this.mtClients.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtClients.TabIndex = 8;
             this.mtClients.Text = "Clients and \r\nStock";
@@ -129,7 +129,7 @@
             this.mtSales.ForeColor = System.Drawing.Color.Ivory;
             this.mtSales.Location = new System.Drawing.Point(0, 0);
             this.mtSales.Name = "mtSales";
-            this.mtSales.Size = new System.Drawing.Size(191, 75);
+            this.mtSales.Size = new System.Drawing.Size(194, 75);
             this.mtSales.Style = MetroFramework.MetroColorStyle.Silver;
             this.mtSales.TabIndex = 7;
             this.mtSales.Text = "Sales";
@@ -168,6 +168,7 @@
             this.panelchildform.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panelchildform.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelchildform.Location = new System.Drawing.Point(237, 63);
+            this.panelchildform.MaximumSize = new System.Drawing.Size(952, 584);
             this.panelchildform.Name = "panelchildform";
             this.panelchildform.Size = new System.Drawing.Size(952, 584);
             this.panelchildform.TabIndex = 13;
@@ -177,11 +178,12 @@
             this.ApplyImageInvert = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 670);
+            this.ClientSize = new System.Drawing.Size(1210, 667);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.panelchildform);
             this.IsMdiContainer = true;
-            this.MaximumSize = new System.Drawing.Size(1212, 670);
+            this.MaximumSize = new System.Drawing.Size(1210, 667);
+            this.MinimizeBox = false;
             this.Name = "Dashboard";
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Dashboard";

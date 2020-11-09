@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework;
+using MetroFramework.Forms;
 
 namespace Medical_Sales_System
 {
@@ -37,6 +39,11 @@ namespace Medical_Sales_System
 
             } 
             new LoginForm().Show();
+        }
+
+        private void btnAboutUs_Click(object sender, EventArgs e)
+        {
+            MetroMessageBox.Show(this, "By Softgenix Technologies");
         }
     }
 }

@@ -50,9 +50,9 @@
             this.btnLogOut.ActiveControl = null;
             this.btnLogOut.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLogOut.Location = new System.Drawing.Point(258, 273);
+            this.btnLogOut.Location = new System.Drawing.Point(213, 247);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(188, 109);
+            this.btnLogOut.Size = new System.Drawing.Size(252, 63);
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,9 +69,9 @@
             this.btnAboutUs.ActiveControl = null;
             this.btnAboutUs.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAboutUs.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAboutUs.Location = new System.Drawing.Point(258, 93);
+            this.btnAboutUs.Location = new System.Drawing.Point(213, 151);
             this.btnAboutUs.Name = "btnAboutUs";
-            this.btnAboutUs.Size = new System.Drawing.Size(188, 109);
+            this.btnAboutUs.Size = new System.Drawing.Size(252, 62);
             this.btnAboutUs.TabIndex = 1;
             this.btnAboutUs.Text = "About us";
             this.btnAboutUs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,6 +81,7 @@
             this.btnAboutUs.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnAboutUs.UseCustomBackColor = true;
             this.btnAboutUs.UseSelectable = true;
+            this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
             // 
             // Settings
             // 
