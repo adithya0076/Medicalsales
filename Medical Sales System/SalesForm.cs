@@ -25,7 +25,7 @@ namespace Medical_Sales_System
         {
             try
             {
-                MySqlCommand cmd = new MySqlCommand("insert into doctor_records values('" + txtDoctorname.Text + "','" + txtProductid.Text + "','" + txtProductname.Text + "','" + txtVolume.Text + "','" + txtquantity.Text + "','" + txtSalesA.Text + "','" + dtVisit.Value.Date + "')", con);
+                MySqlCommand cmd = new MySqlCommand("insert into doctor_records values('"+txtDoctorname.Text+"','"+txtProductid.Text+"','"+txtProductname.Text+"','"+txtVolume.Text+"','"+txtquantity.Text+"','"+txtSalesA.Text+"','"+dtVisit.Value.Date+"')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -79,10 +79,7 @@ namespace Medical_Sales_System
             }
             catch(Exception ex)
             {
-                MetroMessageBox.Show(this, "Error");
-            }
-            finally
-            {
+                MetroMessageBox.Show(this, ex.ToString());
                 txtPharamcyID.Text = "";
                 txtPharmacyname.Text = "";
                 txtProductid.Text = "";
@@ -92,6 +89,7 @@ namespace Medical_Sales_System
                 txtPrice.Text = "";
                 txtSalesA.Text = "";
             }
+          
         }
        
        
