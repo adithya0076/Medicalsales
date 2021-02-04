@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Medical_Sales_System
 {
@@ -17,10 +17,10 @@ namespace Medical_Sales_System
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-O5EMH8PD;Initial Catalog=Medical_Sales;Integrated Security=True");
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=medical_sales;User id=root");
         private void dgvSeller_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter adp = new SqlDataAdapter("select * from distributor", con);
+            MySqlDataAdapter adp = new MySqlDataAdapter("select * from distributor", con);
             DataTable dt = new DataTable();
             con.Open();
             adp.Fill(dt);

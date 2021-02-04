@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using MetroFramework;
 using MetroFramework.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Medical_Sales_System
 {
@@ -23,7 +23,7 @@ namespace Medical_Sales_System
             txtPrice.Visible = false;
             lblPrice.Visible = false;
         }
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-O5EMH8PD;Initial Catalog=Medical_Sales;Integrated Security=True");
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=medical_sales;User id=root");
         private void cbChoice_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbChoice.SelectedIndex == 0)
@@ -32,7 +32,7 @@ namespace Medical_Sales_System
                 lblVolume.Visible = false;
                 txtPrice.Visible = false;
                 lblPrice.Visible = false;
-                SqlDataAdapter adp = new SqlDataAdapter("select * from doctor_list", con);
+                MySqlDataAdapter adp = new MySqlDataAdapter("select * from doctor_list", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 adp.Fill(dt);
@@ -47,7 +47,7 @@ namespace Medical_Sales_System
                 lblVolume.Visible = false;
                 txtPrice.Visible = false;
                 lblPrice.Visible = false;
-                SqlDataAdapter adp = new SqlDataAdapter("select * from pharmacy_list", con);
+                MySqlDataAdapter adp = new MySqlDataAdapter("select * from pharmacy_list", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 adp.Fill(dt);
@@ -62,7 +62,7 @@ namespace Medical_Sales_System
                 lblVolume.Visible = true;
                 txtPrice.Visible = true;
                 lblPrice.Visible = true;
-                SqlDataAdapter adp = new SqlDataAdapter("select * from products", con);
+                MySqlDataAdapter adp = new MySqlDataAdapter("select * from products", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 adp.Fill(dt);
@@ -76,7 +76,7 @@ namespace Medical_Sales_System
         {
             if (cbChoice.SelectedIndex == 0)
             {
-                SqlCommand cmd = new SqlCommand("insert into doctor_list values('" + txtID.Text + "','" + txtName.Text + "')", con);
+                MySqlCommand cmd = new MySqlCommand("insert into doctor_list values('" + txtID.Text + "','" + txtName.Text + "')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -86,7 +86,7 @@ namespace Medical_Sales_System
             }
             if(cbChoice.SelectedIndex==1)
             {
-                SqlCommand cmd = new SqlCommand("insert into pharmacy_list values('" + txtID.Text + "','" + txtName.Text + "')", con);
+                MySqlCommand cmd = new MySqlCommand("insert into pharmacy_list values('" + txtID.Text + "','" + txtName.Text + "')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -96,7 +96,7 @@ namespace Medical_Sales_System
             }
             if(cbChoice.SelectedIndex==2)
             {
-                SqlCommand cmd = new SqlCommand("insert into products values('" + txtID.Text + "','" + txtName.Text + "','"+txtVolume.Text+"','"+txtPrice.Text+"')", con);
+                MySqlCommand cmd = new MySqlCommand("insert into products values('" + txtID.Text + "','" + txtName.Text + "','"+txtVolume.Text+"','"+txtPrice.Text+"')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
 using KimToo;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 
 namespace Medical_Sales_System
@@ -21,15 +21,15 @@ namespace Medical_Sales_System
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-O5EMH8PD;Initial Catalog=Medical_Sales;Integrated Security=True");
-        
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=medical_sales;User id=root");
+
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             if (cbChoice.SelectedIndex == 0)
             {
-                SqlDataAdapter adp = new SqlDataAdapter("select * from doctor_records", con);
+                MySqlDataAdapter adp = new MySqlDataAdapter("select * from doctor_records", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 adp.Fill(dt);
@@ -38,7 +38,7 @@ namespace Medical_Sales_System
             }
             if (cbChoice.SelectedIndex == 1)
             {
-                SqlDataAdapter adp = new SqlDataAdapter("select * from pharmacy_records", con);
+                MySqlDataAdapter adp = new MySqlDataAdapter("select * from pharmacy_records", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 adp.Fill(dt);

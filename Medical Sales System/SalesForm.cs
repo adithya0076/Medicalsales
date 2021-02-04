@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using MetroFramework;
 using MetroFramework.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Medical_Sales_System
 {
@@ -20,12 +20,12 @@ namespace Medical_Sales_System
             InitializeComponent();
            
         }
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-O5EMH8PD;Initial Catalog=Medical_Sales;Integrated Security=True");
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=medical_sales;User id=root");
         private void btnDoctorS_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("insert into doctor_records values('" + txtDoctorname.Text + "','" + txtProductid.Text + "','" + txtProductname.Text + "','" + txtVolume.Text + "','" + txtquantity.Text + "','" + txtSalesA.Text + "','" + dtVisit.Value.Date + "')", con);
+                MySqlCommand cmd = new MySqlCommand("insert into doctor_records values('" + txtDoctorname.Text + "','" + txtProductid.Text + "','" + txtProductname.Text + "','" + txtVolume.Text + "','" + txtquantity.Text + "','" + txtSalesA.Text + "','" + dtVisit.Value.Date + "')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -63,7 +63,7 @@ namespace Medical_Sales_System
 
             try
             {
-                SqlCommand cmd = new SqlCommand("insert into pharmacy_records values('" + txtPharamcyID.Text + "','" + txtPharmacyname.Text + "','" + txtProductid.Text + "','" + txtProductname.Text + "','" + txtVolume.Text + "','" + txtquantity.Text + "','" + txtSalesA.Text + "','" + dtVisit.Value.Date + "')", con);
+                MySqlCommand cmd = new MySqlCommand("insert into pharmacy_records values('" + txtPharamcyID.Text + "','" + txtPharmacyname.Text + "','" + txtProductid.Text + "','" + txtProductname.Text + "','" + txtVolume.Text + "','" + txtquantity.Text + "','" + txtSalesA.Text + "','" + dtVisit.Value.Date + "')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -97,55 +97,74 @@ namespace Medical_Sales_System
        
 
         private void txtProductname_Click(object sender, EventArgs e)
-        {         
-            SqlCommand cmd = new SqlCommand("select product_name from products where product_ID = '" + txtProductid.Text + "'", con);
-
-            con.Open();
-           
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-            if (dr.HasRows)
+        {
+            try
             {
-                dr.Read();
+                MySqlCommand cmd = new MySqlCommand("select product_name from products where product_ID = '" + txtProductid.Text + "'", con);
 
-                txtProductname.Text = dr[0].ToString();
-                    }
-            con.Close();
+                con.Open();
+
+                MySqlDataReader dr;
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Read();
+
+                    txtProductname.Text = dr[0].ToString();
+                }
+                con.Close();
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
 
         }
 
         private void txtPharmacyname_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select pharmacy_name from pharmacy_list where pharmacy_ID = '" + txtPharamcyID.Text + "'", con);
-
-            con.Open();
-
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-            if (dr.HasRows)
+            try
             {
-                dr.Read();
 
-                txtPharmacyname.Text = dr[0].ToString();
+                MySqlCommand cmd = new MySqlCommand("select pharmacy_name from pharmacy_list where pharmacy_ID = '" + txtPharamcyID.Text + "'", con);
+
+                con.Open();
+
+                MySqlDataReader dr;
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Read();
+
+                    txtPharmacyname.Text = dr[0].ToString();
+                }
+                con.Close();
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
-            con.Close();
         }
 
         private void txtDoctorname_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select doctor_name from doctor_list where doctor_ID = '" + txtDoctorID.Text + "'", con);
-
-            con.Open();
-
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-            if (dr.HasRows)
+            try
             {
-                dr.Read();
+                MySqlCommand cmd = new MySqlCommand("select doctor_name from doctor_list where doctor_ID = '" + txtDoctorID.Text + "'", con);
 
-                txtDoctorname.Text = dr[0].ToString();
+                con.Open();
+
+                MySqlDataReader dr;
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Read();
+
+                    txtDoctorname.Text = dr[0].ToString();
+                }
+                con.Close();
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
-            con.Close();
         }
 
         private void txtSalesA_Click(object sender, EventArgs e)

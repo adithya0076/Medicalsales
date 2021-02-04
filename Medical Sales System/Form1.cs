@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using MetroFramework;
 using MetroFramework.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Medical_Sales_System
 {
@@ -20,10 +21,10 @@ namespace Medical_Sales_System
             InitializeComponent();
 
         }
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-O5EMH8PD;Initial Catalog=Medical_Sales;Integrated Security=True");
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=medical_sales;User id=root");
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("select count(*) from login_info where email = '"+txtEmail.Text+"' and password = '"+txtPassword.Text+"'",con);
+            MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from login_info where email = '"+txtEmail.Text+"' and password = '"+txtPassword.Text+"'",con);
 
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -38,7 +39,7 @@ namespace Medical_Sales_System
              
             }
             else
-            {
+           {
                 epWrong.Clear();
                 epWrong.SetError(btnLogin, "Invalid Login");
                

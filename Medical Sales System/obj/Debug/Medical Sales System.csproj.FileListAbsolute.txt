@@ -1,7 +1,6 @@
 C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Medical Sales System.exe.config
 C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Medical Sales System.exe
 C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Medical Sales System.pdb
-C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Bunifu.Licensing.dll
 C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
 C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
 C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
@@ -76,3 +75,27 @@ C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\o
 C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\obj\Debug\Medical_Sales_System.Reports.resources
 C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\obj\Debug\Medical_Sales_System.Seller.resources
 C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\obj\Debug\Medical_Sales_System.Settings.resources
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Google.Protobuf.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\MySql.Data.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Renci.SshNet.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\System.Buffers.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\System.Memory.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Zstandard.Net.dll
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Google.Protobuf.pdb
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Google.Protobuf.xml
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\MySql.Data.xml
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\Renci.SshNet.xml
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\System.Buffers.xml
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\System.Memory.xml
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sinxdell\Documents\codes\c#\Medical Sales System\Medical Sales System\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

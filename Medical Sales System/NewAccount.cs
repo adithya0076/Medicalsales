@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using MetroFramework;
 using MetroFramework.Forms;
 
@@ -20,12 +20,12 @@ namespace Medical_Sales_System
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-O5EMH8PD;Initial Catalog=Medical_Sales;Integrated Security=True");
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=medical_sales;User id=root");
         private void mtCreateNewAC_Click(object sender, EventArgs e)
         {
             if (txtPwN.Text==txtRePwN.Text)
             {
-                SqlCommand cmd = new SqlCommand("insert into login_info values('" + txtEmailN.Text + "','" + txtPwN.Text + "')", con);
+                MySqlCommand cmd = new MySqlCommand("insert into login_info values('" + txtEmailN.Text + "','" + txtPwN.Text + "')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
